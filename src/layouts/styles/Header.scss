@@ -1,0 +1,14 @@
+@use '/src/sass/variables' as v;
+
+.header {
+    display: flex;
+    justify-content: center;
+    &__img {
+        width: 7em;
+        &-container {
+            width: 100%;
+            max-width: v.$maxwidth;
+            padding: 2em 1rem;
+        }
+    }
+}

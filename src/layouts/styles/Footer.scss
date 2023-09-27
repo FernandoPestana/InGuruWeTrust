@@ -1,0 +1,32 @@
+@use 'src/sass/variables' as v;
+@use 'src/sass/mixins' as m;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1d1c;
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        display: flex;
+        width: 100%;
+        max-width: v.$maxwidth;
+        margin: 1em 1rem;
+        gap: 5em;
+        @include m.movil {
+            gap: 2em;
+        }
+        img {
+            width: 6em;
+        }   
+    }
+    &__legal {
+        &-container {
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+    }
+}

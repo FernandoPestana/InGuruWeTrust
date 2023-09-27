@@ -1,0 +1,117 @@
+@use '/src/sass/variables' as v;
+@use '/src/sass/mixins' as m;
+
+.fail {
+    color: #f2317f;
+}
+
+.fail + .forminfo__input {
+    border-color: #f2317f;
+}
+
+.forminfo {
+    display: flex;
+    justify-content: center;
+    &__container {
+        width: 100%;
+        margin: 1em 2em;
+        @include m.movil {
+            margin: 1em 1rem;
+        }
+    }
+    &__contact {
+        &-title {
+            padding: .5em 0;
+            font-size: v.$font-h4;
+            font-family: 'philo2';
+        }
+        &-container {
+            position: relative;
+            label {
+                position: absolute;
+                transform: translateY(-2.1em);
+                pointer-events: none;
+                left: .5em;
+                color: v.$colorInput;
+            }
+            input {
+                width: 100%;
+                background-color: #fff;
+                border-radius: v.$borderInput;
+                padding: 1em .5em;
+                transition: all .2s ease-in-out;
+            }
+        }
+    }
+    &__info {
+        &-flex {
+            display: flex;
+            flex-direction: column;
+            gap: .7em;
+        }
+        &-content {
+            position: relative;
+            width: 100%;
+            label {
+                position: absolute;
+                transform: translateY(-2.1em);
+                pointer-events: none;
+                left: .5em;
+                color: rgb(131, 131, 131);
+            }
+            input {
+                width: 100%;
+                background-color: #fff;
+                border-radius: v.$borderInput;
+                padding: 1em .5em;
+                transition: all .2s ease-in-out;
+            }
+            &-container {
+                display: flex;
+                gap: .5em;
+                @include m.movil {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    &__btn {
+        padding: 1em 3em;
+        background-color: #2f2f2f;
+        border-radius: v.$borderInput;
+        color: #fff;
+        @include m.hover {
+            background-color: #000;
+            cursor: pointer;
+        }
+        &-container {
+            width: 100%;
+            margin: 1.2em 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-back-container {
+            display: flex;
+            align-items: center;
+            @include m.hover {
+                cursor: pointer;
+                color: #2f2f2f;
+            }
+        }
+    }
+}
+
+// inputs animados
+
+.forminfo__input:not(:placeholder-shown) + .forminfo__label {
+    font-size: .8em;
+    bottom: 0em;
+}
+
+.forminfo__input:not(:placeholder-shown){
+    padding: 1.5em 0 .5em .5em;
+}

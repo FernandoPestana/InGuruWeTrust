@@ -1,0 +1,126 @@
+@use 'src/sass/variables' as v;
+@use 'src/sass/mixins' as m;
+
+.formpay {
+    display: flex;
+    justify-content: center;
+    &__container {
+        width: 100%;
+        margin: 0 2em;
+        @include m.movil {
+            padding: 0 1rem;
+        }
+    }
+    &__confirm {
+        background-color: #fff;
+        border-radius: v.$borderInput;
+        &-email {
+            display: flex;
+            &:nth-child(2) {
+                margin: 0 .5em;
+                border-top: 1px solid v.$colorBorder;
+            }
+            &:nth-child(3) {
+                margin:0 .5em;
+                border-top: 1px solid v.$colorBorder;
+            }
+            &:nth-child(1) {
+                margin: 0 .5em;
+            }
+            &-title-container {
+                width: 7em;
+                margin: 1em 0;
+                color: v.$colorInput;
+            }
+            &-btn-container {
+                width: 6em;
+                margin: 0;
+                padding: 1em 0;
+                display: flex;
+                justify-content: flex-end;
+                button {
+                    text-decoration: underline;
+                    @include m.hover {
+                        cursor: pointer;
+                        color: #2f2f2f;
+                    }
+                }
+            }
+            &-span-container {
+                width: 100%;
+                padding: 1em 0;
+            }
+        }
+    }
+    &__payment {
+        margin: 2em 0;
+        &-title {
+            font-size: v.$font-h5;
+            padding: .2em 0;
+        }
+        &-method {
+            &-label {
+                display: flex;
+                background-color: #fff;
+                border-radius: v.$borderInput;
+                &:first-child {
+                     margin: .5em 0;
+                }
+                @include m.hover {
+                    cursor: pointer;
+                }
+            }
+            &-card {
+                &-container {
+                    display: flex;
+                    gap: .5em;
+                    padding: 0 .5em;
+                    align-items: center;
+                    img {
+                        width: 3.8em;
+                    }
+                }
+            }
+            &-circle {
+                padding: .6em 1em .6em 0;
+                em {
+                    font-size: 2em;
+                    color: #555;
+                }
+            }
+            &-title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    &__btn {
+        padding: 1em 3em;
+        background-color: #2f2f2f;
+        border-radius: v.$borderInput;
+        color: #fff;
+        @include m.hover {
+            background-color: #000;
+            cursor: pointer;
+        }
+        &-container {
+            width: 100%;
+            margin: 1.2em 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-back-container {
+            display: flex;
+            align-items: center;
+            @include m.hover {
+                cursor: pointer;
+                color: #2f2f2f;
+            }
+        }
+    }
+}

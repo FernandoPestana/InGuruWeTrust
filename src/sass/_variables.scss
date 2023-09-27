@@ -1,0 +1,24 @@
+/* $bg-color: hsl(158deg 23% 18%); */
+$bg-color: hsla(158, 23%, 18%, 1);
+$colorBody: #000;
+$colorText: hsla(160, 52%, 71%, 1);
+$colorTextSecondary: hsla(159, 42%, 88%, 1);
+$colorGreen: #02A472;
+$colorTitle: #4FF1BA;
+$colorInput: rgb(131, 131, 131);
+$colorBorder: rgb(192, 192, 192);
+
+$maxwidth: 1300px;
+$borderInput: .5em;
+
+/* $font-h1: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem); */
+$font-h1: clamp(2rem, 8.238vw + 0.85rem, 13.75rem);
+$font-h2: clamp(1.5rem, 2.2982rem + 1.7143vw, 3.925rem);
+$font-h3: clamp(1.375rem, 1.1837rem + .8163vw, 2rem);
+$font-h4: clamp(1.375rem, 1.1837rem + .8163vw, 1.6rem);
+$font-h5: clamp(1rem, .9235rem + .3265vw, 1.25rem);
+$font-h6: clamp(1rem, .9617rem + .1633vw, 1.125rem);
+$font-body: clamp(1rem, .8852rem + .4898vw, 1.375rem);
+$font-link: clamp(.875rem, .7985rem + .3265vw, 1.125rem);
+$font-mini: clamp(.775rem, .8257rem + .1633vw, 1rem);
+$font-medium: clamp(1.7rem, 1.1rem + 1.8vw, 2.9rem)
